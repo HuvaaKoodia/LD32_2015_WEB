@@ -15,8 +15,8 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'Web.data';
-    var REMOTE_PACKAGE_BASE = 'Web.data';
+    var PACKAGE_NAME = 'ViralMutationManipulationSimulation_WEB3.data';
+    var REMOTE_PACKAGE_BASE = 'ViralMutationManipulationSimulation_WEB3.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -24,8 +24,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 2945807;
-    var PACKAGE_UUID = '656d0587-27a4-442c-b02f-639b12fe8d45';
+    var REMOTE_PACKAGE_SIZE = 2945819;
+    var PACKAGE_UUID = '100b502f-0f73-4393-9a8e-e18eb3ffeb2c';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -123,11 +123,11 @@ Module['FS_createPath']('/', 'Resources', true, true);
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 339768, 0, 0).open('GET', '/mainData');
-    new DataRequest(339768, 341099, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(341099, 871327, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(871327, 2431699, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(2431699, 2945807, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 339780, 0, 0).open('GET', '/mainData');
+    new DataRequest(339780, 341111, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(341111, 871339, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(871339, 2431711, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(2431711, 2945819, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -142,10 +142,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/sharedassets0.assets"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_Web.data');
+          Module['removeRunDependency']('datafile_ViralMutationManipulationSimulation_WEB3.data');
 
     };
-    Module['addRunDependency']('datafile_Web.data');
+    Module['addRunDependency']('datafile_ViralMutationManipulationSimulation_WEB3.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
