@@ -15,8 +15,8 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'ViralMutationManipulationSimulation_WEB3.data';
-    var REMOTE_PACKAGE_BASE = 'ViralMutationManipulationSimulation_WEB3.data';
+    var PACKAGE_NAME = 'ViralMutationManipulationSimulation_WEB_BUGFIX.data';
+    var REMOTE_PACKAGE_BASE = 'ViralMutationManipulationSimulation_WEB_BUGFIX.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -24,8 +24,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 2945819;
-    var PACKAGE_UUID = '100b502f-0f73-4393-9a8e-e18eb3ffeb2c';
+    var REMOTE_PACKAGE_SIZE = 2946011;
+    var PACKAGE_UUID = 'a39546ca-9b87-4265-be01-f81e12828fd3';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -123,11 +123,11 @@ Module['FS_createPath']('/', 'Resources', true, true);
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 339780, 0, 0).open('GET', '/mainData');
-    new DataRequest(339780, 341111, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(341111, 871339, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(871339, 2431711, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(2431711, 2945819, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 339828, 0, 0).open('GET', '/mainData');
+    new DataRequest(339828, 341167, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(341167, 871531, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(871531, 2431903, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(2431903, 2946011, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -142,10 +142,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/sharedassets0.assets"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_ViralMutationManipulationSimulation_WEB3.data');
+          Module['removeRunDependency']('datafile_ViralMutationManipulationSimulation_WEB_BUGFIX.data');
 
     };
-    Module['addRunDependency']('datafile_ViralMutationManipulationSimulation_WEB3.data');
+    Module['addRunDependency']('datafile_ViralMutationManipulationSimulation_WEB_BUGFIX.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
